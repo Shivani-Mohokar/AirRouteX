@@ -20,14 +20,6 @@
 
 ---
 
-## 📸 Application
-
-<p align="center">
-  <img src="docs/screenshots/home.png" width="850">
-</p>
-
----
-
 ## 🚀 Overview
 
 AirRouteX is a graph-based airline route optimization system that
@@ -70,26 +62,18 @@ Airport
    │
    └── Flight → Airport
 
-## Folder structure
-```
-AirRouteX/
-├── frontend/            HTML/CSS/vanilla JS (7 pages)
-├── backend/
-│   ├── src/com/airroutex/{models,algorithms,dao,database,controllers,servlets,utils}
-│   ├── lib/              mariadb-java-client.jar, jbcrypt.jar (bundled, no Maven needed)
-│   ├── web.xml
-│   └── db.properties.example
-├── database/
-│   ├── schema.sql        3NF schema, 6 tables
-│   └── sample_data.sql   7 airports, 17 flights, demo admin/user accounts
-├── docs/
-│   ├── ER-Diagram.png
-│   ├── Architecture-Diagram.png
-│   ├── Complexity-Analysis.md
-│   └── Interview-QA.md
-├── build.sh              compiles + assembles a deployable webapp/ folder
-└── README.md
-```
+<p align="center"> <img src="docs/Architecture-Diagram.png" width="850"> </p>
+Frontend
+   ↓
+Java Servlets
+   ↓
+Route / Booking Controllers
+   ↓
+Graph + Dijkstra / BFS
+   ↓
+JDBC
+   ↓
+MySQL
 
 ## Setup
 
