@@ -92,3 +92,64 @@ The database stores information about users, airports, flights, and bookings.
 | Dijkstra (Priority Queue) | O((V + E) log V) |
 
 Where `V` is the number of airports and `E` is the number of flights.
+
+---
+
+## Security
+
+- Passwords are protected using BCrypt hashing
+- User sessions are managed using HttpSession
+- Database credentials are kept outside the repository
+
+  ---
+
+## Project Structure
+
+```text
+AirRouteX/
+├── frontend/
+├── backend/
+│   ├── src/com/airroutex/
+│   │   ├── algorithms/
+│   │   ├── controllers/
+│   │   ├── dao/
+│   │   ├── database/
+│   │   ├── models/
+│   │   ├── servlets/
+│   │   └── utils/
+│   ├── lib/
+│   ├── web.xml
+│   └── db.properties.example
+├── database/
+├── docs/
+├── build.sh
+├── .gitignore
+└── README.md
+
+---
+```
+
+## Setup
+
+### Requirements
+
+- Java JDK 17+
+- Apache Tomcat 9
+- MySQL / MariaDB
+
+### Database
+
+Run the SQL scripts from the `database/` folder:
+
+```text
+schema.sql
+sample_data.sql
+```
+
+### Configuration
+
+Copy `backend/db.properties.example` to:
+
+```text
+backend/db.properties
+```
