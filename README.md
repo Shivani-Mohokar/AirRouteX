@@ -153,3 +153,20 @@ Copy `backend/db.properties.example` to:
 ```text
 backend/db.properties
 ```
+---
+
+## Documentation
+
+Additional documentation is available in the `docs/` folder:
+
+- Architecture Diagram
+- ER Diagram
+- Complexity Analysis
+
+---
+
+## Author
+
+**Shivani Mohokar**
+
+[GitHub](https://github.com/Shivani-Mohokar)
