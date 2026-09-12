@@ -32,3 +32,19 @@ AirRouteX is a Java-based airline route optimization system that models flight n
   <img src="https://img.shields.io/badge/Apache%20Tomcat-F8A100?style=for-the-badge&logo=apachetomcat&logoColor=black" />
   <img src="https://img.shields.io/badge/BCrypt-8E24AA?style=for-the-badge" />
 </p>
+
+---
+
+## Algorithms
+
+| Requirement | Algorithm |
+|---|---|
+| Shortest Distance | Dijkstra's Algorithm |
+| Lowest Price | Dijkstra's Algorithm |
+| Shortest Duration | Dijkstra's Algorithm |
+| Minimum Layovers | BFS |
+
+The flight network is represented using an adjacency list:
+
+```text
+HashMap<Integer, List<Flight>>
