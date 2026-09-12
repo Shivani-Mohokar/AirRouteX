@@ -48,3 +48,23 @@ The flight network is represented using an adjacency list:
 
 ```text
 HashMap<Integer, List<Flight>>
+
+---
+
+## Architecture
+
+<p align="center">
+  <img src="docs/Architecture-Diagram.png" alt="AirRouteX Architecture" width="800"/>
+</p>
+
+```text
+Frontend
+   ↓
+Java Servlets
+   ↓
+Route Optimization
+(Dijkstra / BFS)
+   ↓
+DAO Layer + JDBC
+   ↓
+MySQL / MariaDB
