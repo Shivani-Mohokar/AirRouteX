@@ -69,3 +69,14 @@ Route Optimization
 DAO Layer + JDBC
    ↓
 MySQL / MariaDB
+
+---
+```
+
+## Database Design
+
+<p align="center">
+  <img src="docs/ER-Diagram.png" alt="AirRouteX ER Diagram" width="800"/>
+</p>
+
+The database stores information about users, airports, flights, and bookings.
