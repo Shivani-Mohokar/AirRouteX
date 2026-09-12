@@ -1,8 +1,74 @@
-# AirRouteX — Graph-Based Airline Route Optimization System
+# ✈️ AirRouteX
 
-Java Servlets + JDBC + MySQL. Graph modeled from the Flight table at query time (never hardcoded); Dijkstra (shortest distance / lowest price / shortest duration) and BFS (minimum layovers) implemented from scratch on `HashMap`/`ArrayList`/`java.util.Queue`/`java.util.PriorityQueue`. No Spring, no React, no JWT — plain `HttpSession` auth with BCrypt-hashed passwords.
+### Graph-Based Airline Route Optimization System
 
-**Verification performed before packaging:** every `.java` file compiles cleanly against the real `javax.servlet-api`, MariaDB JDBC driver, and jBCrypt jars (bundled in `backend/lib/`). The full pipeline — MySQL → JDBC → Graph → Dijkstra/BFS → auth (register/login/bcrypt) → transactional booking (Booking+BookingLeg) → admin CRUD → unreachable-route handling — was run end-to-end against a live MariaDB instance with the real `sample_data.sql` loaded; see `docs/` for the diagrams this produced.
+<p align="center">
+  A Java-based airline route optimization system that models flight
+  connections as a weighted graph and finds optimal routes using
+  Dijkstra's Algorithm and BFS.
+</p>
+
+<p align="center">
+
+![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk)
+![Servlets](https://img.shields.io/badge/Java-Servlets-red?style=for-the-badge)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?style=for-the-badge&logo=mysql)
+![JDBC](https://img.shields.io/badge/JDBC-Database-green?style=for-the-badge)
+![DSA](https://img.shields.io/badge/DSA-Graphs-purple?style=for-the-badge)
+
+</p>
+
+---
+
+## 📸 Application
+
+<p align="center">
+  <img src="docs/screenshots/home.png" width="850">
+</p>
+
+---
+
+## 🚀 Overview
+
+AirRouteX is a graph-based airline route optimization system that
+connects flight data stored in MySQL with graph algorithms to find
+optimal routes based on different user requirements.
+
+The system supports:
+
+- ✈️ Shortest distance
+- 💰 Lowest price
+- ⏱️ Shortest duration
+- 🔄 Minimum layovers
+- 🔐 User authentication
+- 🎫 Flight booking
+- 🛠️ Admin flight and airport management
+
+---
+
+## 🧠 Algorithms
+
+| Requirement | Algorithm |
+|---|---|
+| Shortest Distance | Dijkstra |
+| Lowest Price | Dijkstra |
+| Shortest Duration | Dijkstra |
+| Minimum Layovers | BFS |
+
+Flight data is loaded from the database at query time and represented
+using an adjacency-list graph.
+
+### Graph Representation
+
+```text
+Airport
+   │
+   ├── Flight → Airport
+   │      ├── Distance
+   │      ├── Price
+   │      └── Duration
+   │
+   └── Flight → Airport
 
 ## Folder structure
 ```
