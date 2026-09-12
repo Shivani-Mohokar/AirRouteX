@@ -80,3 +80,15 @@ MySQL / MariaDB
 </p>
 
 The database stores information about users, airports, flights, and bookings.
+
+---
+
+## Complexity
+
+| Operation | Time Complexity |
+|---|---|
+| Graph Construction | O(V + E) |
+| BFS | O(V + E) |
+| Dijkstra (Priority Queue) | O((V + E) log V) |
+
+Where `V` is the number of airports and `E` is the number of flights.
