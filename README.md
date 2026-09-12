@@ -35,6 +35,8 @@ AirRouteX is a Java-based airline route optimization system that models flight n
 
 ---
 
+---
+
 ## Algorithms
 
 | Requirement | Algorithm |
@@ -48,8 +50,7 @@ The flight network is represented using an adjacency list:
 
 ```text
 HashMap<Integer, List<Flight>>
-
----
+```
 
 ## Architecture
 
