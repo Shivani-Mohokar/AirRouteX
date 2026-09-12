@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | AirRouteX</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="navbar" id="navbar"></div>
+
+  <div class="container narrow">
+    <h2 class="section-title">Login</h2>
+    <div class="card">
+      <div id="loginMsg" class="msg error"></div>
+
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input id="username" required />
+
+        <label for="password">Password</label>
+        <input id="password" type="password" required />
+
+        <div style="margin-top: 20px;">
+          <button type="submit" class="btn full">Login</button>
+        </div>
+      </form>
+
+      <p class="auth-switch">Don't have an account? <a href="register.html">Register</a></p>
+      <p class="auth-switch" style="font-size: 0.8rem;">
+        Demo accounts: <code>admin / admin123</code> (admin) or <code>demo / user123</code> (user)
+      </p>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

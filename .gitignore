@@ -1,0 +1,19 @@
+﻿# Java
+*.class
+
+# Build output
+webapp/
+
+# Database credentials
+backend/db.properties
+
+# IDE files
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

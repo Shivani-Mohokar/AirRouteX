@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | AirRouteX</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="navbar" id="navbar"></div>
+
+  <div class="container narrow">
+    <h2 class="section-title">Create Account</h2>
+    <div class="card">
+      <div id="registerMsg" class="msg error"></div>
+
+      <form id="registerForm">
+        <label for="username">Username</label>
+        <input id="username" minlength="3" required />
+
+        <label for="email">Email (optional)</label>
+        <input id="email" type="email" />
+
+        <label for="password">Password</label>
+        <input id="password" type="password" minlength="6" required />
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input id="confirmPassword" type="password" minlength="6" required />
+
+        <div style="margin-top: 20px;">
+          <button type="submit" class="btn full">Register</button>
+        </div>
+      </form>
+
+      <p class="auth-switch">Already have an account? <a href="login.html">Login</a></p>
+      <p class="auth-switch" style="font-size: 0.8rem;">
+        New accounts are always created with the standard "USER" role.
+      </p>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>

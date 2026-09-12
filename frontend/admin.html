@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | AirRouteX</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="navbar" id="navbar"></div>
+
+  <div class="container">
+    <h2 class="section-title">Admin Panel</h2>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="airportsTab">Airports</button>
+      <button class="tab-btn" data-tab="airlinesTab">Airlines</button>
+      <button class="tab-btn" data-tab="flightsTab">Flights</button>
+    </div>
+
+    <!-- AIRPORTS TAB -->
+    <div id="airportsTab" class="tab-panel active">
+      <div class="card">
+        <h3>Add New Airport</h3>
+        <div id="airportMsg" class="msg"></div>
+        <form id="airportForm">
+          <div class="form-row">
+            <div>
+              <label for="airportCode">Airport Code</label>
+              <input id="airportCode" maxlength="10" placeholder="e.g. DEL" required />
+            </div>
+            <div>
+              <label for="airportCity">City</label>
+              <input id="airportCity" placeholder="e.g. Delhi" required />
+            </div>
+          </div>
+          <label for="airportName">Airport Name</label>
+          <input id="airportName" placeholder="e.g. Indira Gandhi International Airport" required />
+          <div style="margin-top: 16px;">
+            <button type="submit" class="btn">Add Airport</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>All Airports</h3>
+        <table id="airportsTable">
+          <thead><tr><th>Code</th><th>City</th><th>Name</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- AIRLINES TAB -->
+    <div id="airlinesTab" class="tab-panel">
+      <div class="card">
+        <h3>Add New Airline</h3>
+        <div id="airlineMsg" class="msg"></div>
+        <form id="airlineForm">
+          <div class="form-row">
+            <div>
+              <label for="airlineCode">Airline Code</label>
+              <input id="airlineCode" maxlength="10" placeholder="e.g. AI" required />
+            </div>
+            <div>
+              <label for="airlineName">Airline Name</label>
+              <input id="airlineName" placeholder="e.g. Air India" required />
+            </div>
+          </div>
+          <div style="margin-top: 16px;">
+            <button type="submit" class="btn">Add Airline</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>All Airlines</h3>
+        <table id="airlinesTable">
+          <thead><tr><th>Code</th><th>Name</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- FLIGHTS TAB -->
+    <div id="flightsTab" class="tab-panel">
+      <div class="card">
+        <h3 id="flightFormTitle">Add New Flight</h3>
+        <div id="flightMsg" class="msg"></div>
+        <form id="flightForm">
+          <input type="hidden" id="flightId" />
+          <div class="form-row">
+            <div>
+              <label for="flightNumber">Flight Number</label>
+              <input id="flightNumber" placeholder="e.g. AI101" required />
+            </div>
+            <div>
+              <label for="flightAirline">Airline</label>
+              <select id="flightAirline" required></select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="flightSource">Source Airport</label>
+              <select id="flightSource" required></select>
+            </div>
+            <div>
+              <label for="flightDestination">Destination Airport</label>
+              <select id="flightDestination" required></select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="flightDistance">Distance (km)</label>
+              <input id="flightDistance" type="number" min="1" required />
+            </div>
+            <div>
+              <label for="flightPrice">Price (&#8377;)</label>
+              <input id="flightPrice" type="number" min="0" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="flightDuration">Duration (minutes)</label>
+              <input id="flightDuration" type="number" min="1" required />
+            </div>
+            <div></div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="flightDeparture">Departure Time</label>
+              <input id="flightDeparture" type="time" required />
+            </div>
+            <div>
+              <label for="flightArrival">Arrival Time</label>
+              <input id="flightArrival" type="time" required />
+            </div>
+          </div>
+          <div style="margin-top: 16px; display:flex; gap:10px;">
+            <button type="submit" class="btn" id="flightSubmitBtn">Add Flight</button>
+            <button type="button" class="btn secondary" id="flightCancelEdit" style="display:none;">Cancel Edit</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>All Flights</h3>
+        <table id="flightsTable">
+          <thead><tr><th>No.</th><th>Route</th><th>Distance</th><th>Price</th><th>Duration</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer>Admin changes update MySQL directly; the graph rebuilds automatically on the next search.</footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

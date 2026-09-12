@@ -1,0 +1,425 @@
+/* ================================================================
+   style.css - shared styles for all AirRouteX pages
+   Simple, clean, no frameworks/animations.
+   ================================================================ */
+
+:root {
+  --navy: #10233f;
+  --sky: #2f6fed;
+  --sky-light: #eaf1ff;
+  --accent: #ff8a3d;
+  --text: #1c2733;
+  --muted: #5c6b7a;
+  --border: #dbe2ea;
+  --bg: #f6f8fb;
+  --white: #ffffff;
+  --success: #1c9c6b;
+  --danger: #d94141;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--sky);
+  text-decoration: none;
+}
+
+.navbar {
+  background: var(--navy);
+  color: var(--white);
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--white);
+}
+
+.navbar .brand span {
+  color: var(--accent);
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar nav a,
+.navbar nav button.link-btn {
+  color: var(--white);
+  margin-left: 22px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+}
+
+.navbar nav a:hover,
+.navbar nav button.link-btn:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.navbar .role-badge {
+  margin-left: 22px;
+  background: var(--sky);
+  color: var(--white);
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.container.narrow {
+  max-width: 460px;
+}
+
+.hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.1rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #c6d3e8;
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--sky);
+  color: var(--white);
+  border: none;
+  padding: 11px 22px;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #2559c2;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--sky);
+  color: var(--sky);
+}
+
+.btn.danger {
+  background: var(--danger);
+}
+
+.btn.small {
+  padding: 6px 12px;
+  font-size: 0.82rem;
+}
+
+.btn.full {
+  width: 100%;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  margin-bottom: 22px;
+}
+
+.card h2, .card h3 {
+  margin-top: 0;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  color: var(--navy);
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 6px;
+  margin-top: 14px;
+}
+
+select, input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  background: var(--white);
+  font-family: inherit;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.optimize-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.optimize-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin: 0;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.optimize-options input {
+  width: auto;
+  margin: 0;
+}
+
+.optimize-options label.active {
+  border-color: var(--sky);
+  background: var(--sky-light);
+  color: var(--sky);
+}
+
+.route-summary {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.stat {
+  background: var(--sky-light);
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  min-width: 130px;
+}
+
+.stat .value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.stat .label {
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.route-path {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.route-path .city {
+  background: var(--navy);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.route-path .arrow {
+  color: var(--muted);
+}
+
+.segment {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.segment .flight-id {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.empty-state, .error-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--muted);
+}
+
+.error-state {
+  color: var(--danger);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+  padding: 10px 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.92rem;
+  color: var(--muted);
+  border-bottom: 2px solid transparent;
+  font-family: inherit;
+}
+
+.tab-btn.active {
+  color: var(--sky);
+  border-bottom-color: var(--sky);
+  font-weight: 600;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.msg {
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  margin-bottom: 14px;
+  display: none;
+}
+
+.msg.show {
+  display: block;
+}
+
+.msg.success {
+  background: #e2f6ec;
+  color: var(--success);
+}
+
+.msg.error {
+  background: #fbe6e6;
+  color: var(--danger);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.feature-grid .card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.status-badge {
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.status-badge.confirmed {
+  background: #e2f6ec;
+  color: var(--success);
+}
+
+.status-badge.cancelled {
+  background: #fbe6e6;
+  color: var(--danger);
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}

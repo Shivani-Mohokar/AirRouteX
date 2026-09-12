@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AirRouteX | Airline Route Optimization</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="navbar" id="navbar"></div>
+
+  <div class="hero">
+    <h1>Graph-powered airline route optimization</h1>
+    <p>
+      AirRouteX models every airport as a vertex and every flight as an edge, then runs
+      Dijkstra and BFS - built from scratch on top of Java, JDBC, and MySQL - to find the
+      shortest-distance, cheapest, fastest, or fewest-layover route between any two cities.
+    </p>
+    <a href="search.html" class="btn">Search Flights</a>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title">How it works</h2>
+    <div class="feature-grid">
+      <div class="card">
+        <h3>Shortest Distance</h3>
+        <p>Dijkstra's algorithm with each flight's distance in kilometers as the edge weight.</p>
+      </div>
+      <div class="card">
+        <h3>Lowest Price</h3>
+        <p>The same Dijkstra implementation, re-run with ticket price as the edge weight instead.</p>
+      </div>
+      <div class="card">
+        <h3>Shortest Duration</h3>
+        <p>Again the same Dijkstra code, this time minimizing total flight duration in minutes.</p>
+      </div>
+      <div class="card">
+        <h3>Minimum Layovers</h3>
+        <p>Breadth-First Search treats every flight as one unweighted hop to find the fewest-stop route.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>Java Servlets + JDBC + MySQL &mdash; Graph, HashMap, ArrayList, Queue, and PriorityQueue-based algorithms.</footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

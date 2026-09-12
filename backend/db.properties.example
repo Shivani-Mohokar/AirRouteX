@@ -1,0 +1,7 @@
+# Copy this file to db.properties (same folder) and fill in your real
+# MySQL credentials. db.properties is what DBConnection.java actually
+# reads at runtime - db.properties.example is just a template.
+
+db.url=jdbc:mariadb://localhost:3306/airroutex_db
+db.user=root
+db.password=your_mysql_password

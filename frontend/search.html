@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Flights | AirRouteX</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="navbar" id="navbar"></div>
+
+  <div class="container">
+    <h2 class="section-title">Search Flights</h2>
+
+    <div class="card">
+      <div id="searchMsg" class="msg error"></div>
+
+      <form id="searchForm">
+        <div class="form-row">
+          <div>
+            <label for="source">Source City</label>
+            <select id="source" required></select>
+          </div>
+          <div>
+            <label for="destination">Destination City</label>
+            <select id="destination" required></select>
+          </div>
+        </div>
+
+        <label>Optimize For</label>
+        <div class="optimize-options" id="optimizeOptions">
+          <label class="active">
+            <input type="radio" name="type" value="distance" checked /> Shortest Distance
+          </label>
+          <label>
+            <input type="radio" name="type" value="price" /> Lowest Price
+          </label>
+          <label>
+            <input type="radio" name="type" value="duration" /> Shortest Duration
+          </label>
+          <label>
+            <input type="radio" name="type" value="layovers" /> Minimum Layovers
+          </label>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <button type="submit" class="btn">Search</button>
+        </div>
+      </form>
+    </div>
+
+    <footer>Route search rebuilds the graph fresh from MySQL on every request and runs Dijkstra or BFS.</footer>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>
